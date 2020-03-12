@@ -13,8 +13,7 @@
 }
 .dollartree {
 	display: inline block;
-	block-size: 15px;
-	
+	padding: 20px 20px;
 	font-size: 24px;
 	cursor: pointer;
 	text-align: center;
