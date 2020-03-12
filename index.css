@@ -1,3 +1,10 @@
+.header {
+  	font-family: Verdana, Geneva, sans-serif;
+  	padding: 60px;
+  	text-align: center;
+  	background: #1abc9c;
+	color: white;
+	font-size: 30px;
 .dollar_tree {
 	display: inline-block;
 	padding: 100px 40px;
@@ -15,12 +22,4 @@
 	margin-bottom: 20px;
 	margin-top: 20px;
 	margin-right: 20px;
-}
-.header {
-  font-family: Verdana, Geneva, sans-serif;
-  padding: 60px;
-  text-align: center;
-  background: #1abc9c;
-  color: white;
-  font-size: 30px;
 }
