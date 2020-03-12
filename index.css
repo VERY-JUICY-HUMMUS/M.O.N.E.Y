@@ -5,11 +5,11 @@
   	background: #1abc9c;
 	color: white;
 	font-size: 45px;
-	margin-left: 20px;
-	margin-right: 20px;
-	margin-top: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 10px;
 	border-radius: 15px;
-	
+	cursor: pointer;
 .dollarTree {
 	display: inline-block;
 	padding: 100px 40px;
