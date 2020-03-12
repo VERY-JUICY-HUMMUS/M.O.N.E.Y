@@ -1,5 +1,19 @@
 .button {
 	display: inline-block;
+	padding: 30px 40px;
+	font-size: 24px;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+	color: #008000;
+	background-color: #228B22;
+	border: none;
+	border-radius: 15px;
+	box-shadow: 20px;
+	margin-left: 20px;
+	margin-bottom: 10px;
+  
 }
 .header {
   font-family: Verdana, Geneva, sans-serif;
