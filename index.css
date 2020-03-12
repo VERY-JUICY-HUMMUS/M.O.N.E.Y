@@ -11,18 +11,14 @@
 	border-radius: 15px;
 	cursor: pointer;
 .dollartree {
-	display: inline-block;
 	padding: 100px 40px;
 	font-size: 24px;
 	cursor: pointer;
 	text-align: center;
-	text-decoration: none;
-	outline: none;
 	color: #00FF7F;
 	background-color: #008000;
 	border: none;
 	border-radius: 15px;
-	box-shadow: 20px;
 	margin-left: 20px;
 	margin-bottom: 20px;
 }
