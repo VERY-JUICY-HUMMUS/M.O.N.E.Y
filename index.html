@@ -3,7 +3,7 @@
   <head>
     <link rel="stylesheet" href="index.css";
     <div class="money">
-	        <h1> </h1>
+	        <h1> Money </h1>
     </div>
     <div class="header"> 
 		<h1> M.O.N.E.Y </h1>
@@ -13,26 +13,27 @@
   <body>  
 	<button class="dollartree" onclick="collectdollartree()">Dollar Tree</button>
 	<button class="button" onclick="advertisements()"> Advertisements </button>
-	
-
-	
-  
-
 <script>
+	
 	var money = 0;
 	var dollartreevalue = 1;
+	var costofdollartreeads = 10;
+	
 	function collectdollartree() {
 		money += dollartreevalue;
 		document.getElementById("moneyDisplay").innerHTML = "Money $" + money;
 	}
+	
 	function advertisements() {
-		money -= 10;
+		money -= costofdollartreeads;
 		if (money >= 0) {
-			dollartreevalue += 1;
+			dollartreevalue += dollartreevalue*0.08;
 			document.getElementById("moneyDisplay").innerHTML = "Money $" + money;
-		} else {
-                        money += 10;
+		} 
+		else {
+            money += costofdollartreeads;
 			alert ("Yeah, no, you have no money");
+			document.getElementById("moneyDisplay").innerHTML = "Money $" + money;v
 		}
 	}
 	
