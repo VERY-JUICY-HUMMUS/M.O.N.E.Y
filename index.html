@@ -8,11 +8,14 @@
     <div class="dollartree">
 		<h1>Dollar Tree</h1>
     </div>
-	<button class="button" onclick="advertisements()"> Advertisements </button>
+	<button class="button" onclick="advertisements()" id="ad"> Advertisements </button>
   </HEAD>
 </HTML>
 <script>
 	function advertisements() {
-		alert("this currently does nothing");
+		//alert("this currently does nothing");
+		document.getElementById("ad").innerHTML = "this should work";
 	}
+	
+//document.getElementById("ad").innerHTML = "this should work"; ---- Please don't delete
 </script>
