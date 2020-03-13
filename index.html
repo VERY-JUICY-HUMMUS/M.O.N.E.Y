@@ -21,13 +21,12 @@
 	}
 	function advertisements() {
 		money -= 10;
-		if (money < 0) {
-			money += 10;
-			alert ("Yeah, no, you have no money");
-		}
 		if (money >= 0) {
 			dollartreevalue += 1;
 			document.getElementById("moneyDisplay").innerHTML = "Money $" + money;
+		} else {
+                        money += 10;
+			alert ("Yeah, no, you have no money");
 		}
 	}
 	
