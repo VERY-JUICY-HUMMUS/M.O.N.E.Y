@@ -1,13 +1,13 @@
 .header {
+	position: absolute;
+	top: 10px;
+	left: 10px;
   	font-family: Verdana, Geneva, sans-serif;
   	padding: 30px;
   	text-align: center;
   	background: #1abc9c;
 	color: white;
 	font-size: 45px;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-top: 10px;
 	border-radius: 15px;
 	cursor: pointer;
 }
@@ -44,6 +44,9 @@
 }
 .money {
         position: sticky;
+	position: absolute;
+	top: 15px;
+	left: 15px;
 	display: inline block;
 	padding: 10px 10px;
 	font-size: 12px;
@@ -52,8 +55,6 @@
 	color: #32CD32;
 	background-color: #000000;
 	border: none;
-	margin-top: 10px;
-	margin-left: 750px;
 }	
 
 
