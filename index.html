@@ -19,8 +19,14 @@
 	}
 	function advertisements() {
 		money -= 10;
-		dollartreevalue += 1;
-		
+		if (money < 0) {
+			money += 10;
+			alert ("Yeah, no, you have no money");
+		}
+		if (money >= 0) {
+			dollartreevalue += 1;
+			document.getElementById("moneyDisplay").innerHTML = "Money $" + money;
+		}
 	}
 	
 //document.getElementById("ad").innerHTML = "this should work"; ---- Please don't delete
