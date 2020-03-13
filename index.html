@@ -28,7 +28,7 @@
 	function advertisements() {
 		money -= costofdollartreeads;
 		if (money >= 0) {
-			dollartreevalue += dollartreevalue*0.08;
+			dollartreevalue += Math.ceil(dollartreevalue*0.08);
 			document.getElementById("insert").innerHTML = "Money $" + money;
 		} 
 		else {
