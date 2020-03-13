@@ -29,7 +29,7 @@
 	function advertisements() {
 		money -= (amountBuying*costofdollartreeads);
 		if (money >= 0) {
-			dollartreevalue += Math.ceil(dollartreevalue*0.08*amountBuying);
+			dollartreevalue += (dollartreevalue*0.1*amountBuying);
 			document.getElementById("insert").innerHTML = "Money $" + money;
 		} 
 		else {
