@@ -13,6 +13,7 @@
 <body>  
 	<button class="dollartree" onclick="collectdollartree()">Dollar Tree</button>
 	<button class="button" onclick="advertisements()"> Advertisements </button>
+	<button class="button" onclick="changeAmountBuying()" id="displayAmountBuying"></button>
 
 <script>
 	
@@ -29,7 +30,7 @@
 	function advertisements() {
 		money -= (amountBuying*costofdollartreeads);
 		if (money >= 0) {
-			dollartreevalue += (dollartreevalue*0.1*amountBuying);
+			dollartreevalue += Math.ceil(dollartreevalue*0.08*amountBuying);
 			document.getElementById("insert").innerHTML = "Money $" + money;
 		} 
 		else {
@@ -39,6 +40,15 @@
 		}
 	}
 	
+	function changeAmountBuying() {
+		if (amountBuying = 1) {
+			amountBuying = 5;
+			document.getElementById("displayAmountBuying").innerHTML = "Amount Buying is " + amountBuying;
+		} else if (amountBuying = 5) {
+			amountBuying = 1;
+			document.getElementById("displayAmountBuying").innerHTML = "Amount Buying is " + amountBuying;
+		}
+	}
 //document.getElementById("ad").innerHTML = "this should work"; ---- Please don't delete
 </script>
 </body>
