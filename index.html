@@ -19,6 +19,7 @@
 	var money = 0;
 	var dollartreevalue = 1;
 	var costofdollartreeads = 10;
+	var amountBuying = 1;
 	document.getElementById("insert").innerHTML = "Money $" + money;
 	function collectdollartree() {
 		money += dollartreevalue;
@@ -26,14 +27,14 @@
 	}
 	
 	function advertisements() {
-		money -= costofdollartreeads;
+		money -= (amountBuying*costofdollartreeads);
 		if (money >= 0) {
-			dollartreevalue += Math.ceil(dollartreevalue*0.08);
+			dollartreevalue += Math.ceil(dollartreevalue*0.08*amountBuying);
 			document.getElementById("insert").innerHTML = "Money $" + money;
 		} 
 		else {
-            money += costofdollartreeads;
-			alert ("Yeah, no, you do not have enough money.");
+            money += (amountBuying*costofdollartreeads);
+			alert ("You do not have enough money.");
 			document.getElementById("insert").innerHTML = "Money $" + money;
 		}
 	}
