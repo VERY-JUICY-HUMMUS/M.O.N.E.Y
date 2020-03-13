@@ -50,13 +50,13 @@
 	cursor: pointer;
 	text-align: center;
 	color: #32CD32;
-	background-color: #BABABA
+	background-color: #000000;
 	border: none;
 	margin-top: 10px;
 	margin-left: 750px;
 }	
 
 
-body {
-	background-color: #000000;
+body 
+	background-color: #BABABA;
 }
