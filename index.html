@@ -19,22 +19,22 @@
 	var money = 0;
 	var dollartreevalue = 1;
 	var costofdollartreeads = 10;
-	document.getElementById("insert").innerHTML = money;
+	document.getElementById("insert").innerHTML = "Money $" + money;
 	function collectdollartree() {
 		money += dollartreevalue;
-		document.getElementById("moneyDisplay").innerHTML = "Money $" + money;
+		document.getElementById("insert").innerHTML = "Money $" + money;
 	}
 	
 	function advertisements() {
 		money -= costofdollartreeads;
 		if (money >= 0) {
 			dollartreevalue += dollartreevalue*0.08;
-			document.getElementById("moneyDisplay").innerHTML = "Money $" + money;
+			document.getElementById("insert").innerHTML = "Money $" + money;
 		} 
 		else {
             money += costofdollartreeads;
 			alert ("Yeah, no, you have no money");
-			document.getElementById("moneyDisplay").innerHTML = "Money $" + money;
+			document.getElementById("insert").innerHTML = "Money $" + money;
 		}
 	}
 	
