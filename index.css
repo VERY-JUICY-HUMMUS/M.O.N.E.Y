@@ -12,6 +12,7 @@
 	cursor: pointer;
 }
 .dollartree {
+	position: relative;
 	display: inline block;
 	padding: 40px 30px;
 	font-size: 24px;
