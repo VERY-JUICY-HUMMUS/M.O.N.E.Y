@@ -4,14 +4,17 @@
     <link rel="stylesheet" href="index.css">
     <div class="header"> 
 		<h1> M.O.N.E.Y </h1>
-    </div>
-    <div class="dollartree">
-		<h1>Dollar Tree</h1>
-    </div>
+	</div>
+	<button class="dollartree" onclick="collectdollartree()">Dollar Tree</button>
 	<button class="button" onclick="advertisements()"> Advertisements </button>
   </HEAD>
 </HTML>
 <script>
+	var money = 0;
+	var dollartreevalue = 1;
+	function collectdollartree() {
+		money += dollartreevalue;
+	}
 	function advertisements() {
 		alert("this currently does nothing");
 	}
