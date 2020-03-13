@@ -24,12 +24,12 @@
 	document.getElementById("insert").innerHTML = "Money $" + money;
 	function collectdollartree() {
 		money += dollartreevalue;
+		money = Math.floor(money);
 		document.getElementById("insert").innerHTML = "Money $" + money;
 	}
 	
 	function advertisements() {
 		money -= (amountBuying*costofdollartreeads);
-		money = Math.floor(money);
 		if (money >= 0) {
 			dollartreevalue += (dollartreevalue*0.08*amountBuying);
 			document.getElementById("insert").innerHTML = "Money $" + money;
