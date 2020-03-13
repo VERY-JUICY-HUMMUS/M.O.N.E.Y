@@ -3,8 +3,8 @@
   <head>
     <link rel="stylesheet" href="index.css";
     <div class="money">
-	        <h1> Money </h1>
-    </div>
+	        <h1 id="insert"></h1>
+	</div>
     <div class="header"> 
 		<h1> M.O.N.E.Y </h1>
     </div>
@@ -21,7 +21,7 @@
 	var money = 0;
 	var dollartreevalue = 1;
 	var costofdollartreeads = 10;
-	
+	document.getElementById("insert").innerHTML = money;
 	function collectdollartree() {
 		money += dollartreevalue;
 		document.getElementById("moneyDisplay").innerHTML = "Money $" + money;
