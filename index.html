@@ -7,6 +7,7 @@
 	</div>
 	<button class="dollartree" onclick="collectdollartree()">Dollar Tree</button>
 	<button class="button" onclick="advertisements()"> Advertisements </button>
+	  <h1 id="moneyDisplay"></h1>
   </HEAD>
 </HTML>
 <script>
@@ -14,9 +15,11 @@
 	var dollartreevalue = 1;
 	function collectdollartree() {
 		money += dollartreevalue;
+		document.getElementById("moneyDisplay").innerHTML = "Money $" + money;
 	}
 	function advertisements() {
 		alert("this currently does nothing");
+		
 	}
 	
 //document.getElementById("ad").innerHTML = "this should work"; ---- Please don't delete
