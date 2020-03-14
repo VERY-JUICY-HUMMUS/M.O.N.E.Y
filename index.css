@@ -42,6 +42,15 @@
 	margin-top: 30px;
 	/*right: 50px;*/
 }
+.button:active {
+
+  background-color: #BCBCBC;
+
+  box-shadow: 0 5px #666;
+
+  transform: translateX(30px);
+
+}
 .money {
 	position: absolute;
 	top: 10px;
