@@ -11,7 +11,7 @@
   </head>
 <body>  
 	<button class="dollartree" onclick="collectdollartree()">Dollar Tree</button>
-	<button class="button" onclick="advertisements()"> Advertisements </button>
+	<button class="button" onclick="advertisements()" id="ad"> Advertisements </button>
 	<button class="button" onclick="changeAmountBuying()" id="displayAmountBuying">Amount Buying is 1</button>
 
 <script>
@@ -34,6 +34,7 @@
 		if (money >= 0) {
 			dollartreevalue += (dollartreevalue*0.08*amountBuying);
 			document.getElementById("insert").innerHTML = "Money $" + money;
+			document.getElementById("ad").innerHTML = "Advertisements $" + costofdollartreeads;
 		} 
 		else {
             money += (amountBuying*costofdollartreeads);
@@ -54,6 +55,14 @@
 			document.getElementById("displayAmountBuying").innerHTML = "Amount Buying is " + amountBuying;
 		}
 	}
+	
+	function saveGame() {
+		localSave.money = Number(money);
+		localSave.dollartreevalue = Number(dollartreevalue);
+		localSave.costofdollartreeads = Number(costofdollartreeads);
+		
+	}
+	
 //document.getElementById("ad").innerHTML = "this should work"; ---- Please don't delete
 </script>
 </body>
