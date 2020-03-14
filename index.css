@@ -58,13 +58,13 @@
 	margin-top: 30px;
 	right: 50px;
 }
-.button:active {
+/*.button:active {
 
   background-color: #BCBCBC;
 
   box-shadow: 0 5px #666;
 
-  transform: translateX(30px);
+  transform: translateX(30px);*/
 
 }
 .money {
