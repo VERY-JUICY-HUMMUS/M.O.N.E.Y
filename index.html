@@ -2,13 +2,12 @@
 <html>
   <head>
     <link rel="stylesheet" href="index.css";
-    <div class="money">
-	        <h1 id="insert"></h1>
-	</div>
     <div class="header"> 
 		<h1> M.O.N.E.Y </h1>
     </div>
-    
+    <div class="money">
+	        <h1 id="insert"></h1>
+	</div>
   </head>
 <body>  
 	<button class="dollartree" onclick="collectdollartree()">Dollar Tree</button>
@@ -16,18 +15,20 @@
 	<button class="button" onclick="changeAmountBuying()" id="displayAmountBuying">Amount Buying is 1</button>
 
 <script>
-	
+	//Here are the variables, in case you can't read code.
 	var money = 0;
 	var dollartreevalue = 1;
 	var costofdollartreeads = 10;
 	var amountBuying = 1;
+	//This displays Money with the variable 'money' 
 	document.getElementById("insert").innerHTML = "Money $" + money;
+	//This is what happens when you click on the dollar tree store. Yes you click on a store to make money.
 	function collectdollartree() {
 		money += dollartreevalue;
 		money = Math.floor(money);
 		document.getElementById("insert").innerHTML = "Money $" + money;
 	}
-	
+	//Here is what happens when you buy better advertisements. Bloomburg is familiar with this function.
 	function advertisements() {
 		money -= (amountBuying*costofdollartreeads);
 		if (money >= 0) {
@@ -40,7 +41,7 @@
 			document.getElementById("insert").innerHTML = "Money $" + money;
 		}
 	}
-	
+	//Other cool stuff to do with buying things. 
 	function changeAmountBuying() {
 		if (amountBuying === 1) {
 			amountBuying = 5;
