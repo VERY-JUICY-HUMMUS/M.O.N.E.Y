@@ -1,4 +1,4 @@
-.thetitle {
+.h1 {
 	position: absolute;
 	top: 10px;
 	left: 10px:
@@ -82,7 +82,7 @@
 }
 
 body{
-        background-color: #000000;
+        /*background-color: #000000;*/
 }
 
 
