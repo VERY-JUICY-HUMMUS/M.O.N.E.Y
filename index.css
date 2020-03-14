@@ -1,7 +1,7 @@
 .titlee {
 	position: absolute;
 	font-size: 45px;
-	top: 10px;
+	top: -20px;
 	left: 10px:
 	color: white;
 	cursor: pointer;
@@ -23,9 +23,9 @@
 	border-radius: 15px;
 	margin-left: 20px;
 	margin-right: 20px;
-	margin-top: 100px;
+	margin-top: 120px;
 }
-.button2 {
+.amountBuying {
 	position: absolute;
 	display: inline;
 	padding: 10px 10px;
@@ -39,10 +39,10 @@
 	margin-left: 700px;
 	/*margin-right: 1144px;*/
 	margin-top: 30px;
-	/*right: 50px;*/
-	top: 50px;
+	right: 85px;
+	top: -9px;
 }
-.button {
+.TreeAd {
 	position: absolute;
 	display: inline;
 	padding: 10px 10px;
@@ -53,20 +53,15 @@
 	background-color: #BABABA;
 	border: none;
 	border-radius: 10px;
-	margin-left: 700px;
-	/*margin-right: 1144px;*/
-	margin-top: 30px;
-	/*right: 50px;*/
+	margin-top: 130px;
+	right: 925px;
 }
 /*.button:active {
-
   background-color: #BCBCBC;
-
   box-shadow: 0 5px #666;
+  transform: translateX(30px);
 
-  transform: translateX(30px);*/
-
-}
+}*/
 .money {
 	position: absolute;
 	top: 10px;
@@ -84,5 +79,3 @@
 body{
         /*background-color: #000000;*/
 }
-
-
