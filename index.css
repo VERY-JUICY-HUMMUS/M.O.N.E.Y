@@ -2,8 +2,8 @@
 	position: absolute;
 	top: 10px;
 	left: 10px;
-}
-	/*
+
+	
   	font-family: Verdana, Geneva, sans-serif;
   	padding: 30px;
   	text-align: center;
@@ -49,8 +49,8 @@
 	position: absolute;
 	top: 15px;
 	left: 15px;
-}
-/*
+
+
 	display: inline block;
 	padding: 10px 10px;
 	font-size: 12px;
@@ -63,5 +63,5 @@
 body{
         background-color: #000000;
 }
-*/
+
 
