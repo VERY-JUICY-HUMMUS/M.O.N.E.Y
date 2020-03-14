@@ -32,6 +32,7 @@
 	function advertisements() {
 		money -= (amountBuying*costofdollartreeads);
 		if (money >= 0) {
+			costofdollartreeads += (costofdollartreeads*0.1);
 			dollartreevalue += (dollartreevalue*0.1*amountBuying);
 			document.getElementById("insert").innerHTML = "Money $" + money;
 			document.getElementById("ad").innerHTML = "Advertisements $" + costofdollartreeads;
