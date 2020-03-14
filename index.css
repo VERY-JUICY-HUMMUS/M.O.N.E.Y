@@ -1,14 +1,14 @@
 .titlee {
 	position: absolute;
+	font-size: 45px;
 	top: 10px;
 	left: 10px:
-	background-color: #1abc9c;
 	color: white;
 	cursor: pointer;
-	font-size: 45px;
 	padding: 30px;
 	border-radius: 15px;
 	text-align: center;
+	background-color: #1abc9c;
 }
 .dollartree {
 	position: relative;
