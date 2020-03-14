@@ -4,6 +4,10 @@
 	left: 10px;
 	font-family: Verdana, Geneva, sans-serif;
 	background: #1abc9c;
+	color: white;
+	cursor: pointer;
+	font-size: 45px;
+	padding: 10px;
 }
 /*
 	
@@ -50,8 +54,8 @@
 */
 .money {
 	position: absolute;
-	top: 15px;
-	right: 15px;
+	top: 10px;
+	right: 10px;
 }
 /*
 
