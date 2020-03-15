@@ -42,7 +42,7 @@
 	right: 10px;
 	top: 30px;
 }
-.TreeAd {
+.TreeBt1 {
 	position: relative;
 	display: inline;
 	padding: 10px 10px;
@@ -54,7 +54,52 @@
 	border: none;
 	border-radius: 10px;
 	margin-top: 130px;
-	top: -30px;
+	top: -25px;
+}
+.TreeBt2 {
+	position: relative;
+	display: inline;
+	padding: 10px 10px;
+	font-size: 12px;
+	cursor: pointer;
+	text-align: center;
+	color: #000000;
+	background-color: #BABABA;
+	border: none;
+	border-radius: 10px;
+	margin-top: 130px;
+	top: 15px;
+    right: 130px;
+}
+.TreeBt3 {
+	position: relative;
+	display: inline;
+	padding: 10px 10px;
+	font-size: 12px;
+	cursor: pointer;
+	text-align: center;
+	color: #000000;
+	background-color: #BABABA;
+	border: none;
+	border-radius: 10px;
+	margin-top: 130px;
+	top: 15px;
+    right: 130px;
+}
+.TreeBt4 {
+	position: relative;
+	display: inline;
+	padding: 10px 10px;
+	font-size: 12px;
+	cursor: pointer;
+	text-align: center;
+	color: #000000;
+	background-color: #BABABA;
+	border: none;
+	border-radius: 10px;
+	margin-top: 130px;
+	top: -25px;
+    right: 170px;
 }
 /*.button:active {
   background-color: #BCBCBC;
