@@ -25,15 +25,16 @@
 	//This is what happens when you click on the dollar tree store. Yes you click on a store to make money.
 	function collectdollartree() {
 		money += dollartreevalue;
-		money;
+		money = (Math.ceil(money*10)/10);
 		document.getElementById("insert").innerHTML = "Money $" + money;
 	}
 	//Here is what happens when you buy better advertisements. Bloomburg is familiar with this function.
 	function advertisements() {
 		money -= (amountBuying*costofdollartreeads);
 		if (money >= 0) {
-			costofdollartreeads += (costofdollartreeads*0.1*amountBuying);
-			dollartreevalue += (Math.ceil(dollartreevalue*0.1*amountBuying*10)/10)
+			costofdollartreeads += (Math.ceil(costofdollartreeads*0.1*amountBuying*10)/10);
+			dollartreevalue += (Math.ceil(dollartreevalue*0.1*amountBuying*10)/10);
+            money = (Math.ceil(money*10)/10);
 			document.getElementById("insert").innerHTML = "Money $" + money;
 			document.getElementById("ad").innerHTML = "Advertisements $" + costofdollartreeads;
 		} 
