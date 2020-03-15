@@ -9,11 +9,12 @@
   </head>
 <body>  
 	<button class="dollartree" onclick="collectdollartree()">Dollar Tree</button>
-	<button class="caribou" onclick="collectCaribou()" id="car">$200</button>
 	<button class="TreeBt1" onclick="advertisements()" id="ad"> Advertisements </button>
     <button class="TreeBt2" onclick="upgradeManager()" id="bt2"> Manager </button>
     <button class="TreeBt3" onclick="advertisements()" id="bt3"> $treebutton </button>
     <button class="TreeBt4" onclick="advertisements()" id="bt4"> $treebutton </button>
+    <button class="caribou" onclick="collectCaribou()" id="car">$200</button>
+    <button class="CarBt1" onclick="carAd()" id="car">Advertisements</button>
 	<button class="amountBuying" onclick="changeAmountBuying()" id="displayAmountBuying">Amount Buying is 1</button>
 
 <script>
@@ -41,11 +42,12 @@
 		document.getElementById("insert").innerHTML = "Money $" + money;
 	}
 	function collectCaribou() {
-		if (caribouUnlocked==0 &&  money >= 200) {
+		if (caribouUnlocked == 0 &&  money >= 200) {
 		money -= 200;
 		carribouUnlocked = 1;
+        alert(carribouUnlocked);
 		document.getElementById("car").innerHTML = "Caribou";
-		} else if (caribouUnlocked == 1) {
+		} else if (carribouUnlocked === 1) {
 		money += caribouvalue;
 		roundAll();
 		document.getElementById("insert").innerHTML = "Money $" + money;
