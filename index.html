@@ -33,7 +33,7 @@
 		money -= (amountBuying*costofdollartreeads);
 		if (money >= 0) {
 			costofdollartreeads += (costofdollartreeads*0.1*amountBuying);
-			dollartreevalue += (dollartreevalue*0.1*amountBuying);
+			dollartreevalue += (Math.ceil(dollartreevalue*0.1*amountBuying*10)/10)
 			document.getElementById("insert").innerHTML = "Money $" + money;
 			document.getElementById("ad").innerHTML = "Advertisements $" + costofdollartreeads;
 		} 
