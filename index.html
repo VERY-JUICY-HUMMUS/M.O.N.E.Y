@@ -22,9 +22,9 @@
 	var costofdollartreeads = 10;
 	var amountBuying = 1;
 	var managerMoney = 0;
-    var managerCost = 10;
-    var defaultColor;
-    var thingFixing;
+        var managerCost = 10;
+        var defaultColor;
+        var thingFixing;
 	var managerUpdateTime = 1000; //This is in miliseconds --> 1000 = 1 second
 	document.getElementById("ad").innerHTML = "Advertisements $" + costofdollartreeads;
 	
@@ -71,17 +71,17 @@
         document.getElementById("insert").innerHTML = "Money $" + money;
 		window.setTimeout(update, managerUpdateTime);
 	}
-     function upgradeManager() {
-     money -= managerCost;
-     	if (money >= 0) {
-        managerCost += (managerCost*0.1);
-        managerMoney += 1;
+        function upgradeManager() {
+        money -= managerCost;
+        	if (money >= 0) {
+        		managerCost += (managerCost*0.1);
+       			managerMoney += 1;
         } else {
-        money += managerCost;
-        document.getElementById("bt2").style.color = "red";
-        defaultColor = "black";
-        thingFixing = "bt2";
-        window.setTimeout(fix, 800);
+        	money += managerCost;
+        	document.getElementById("bt2").style.color = "red";
+        	defaultColor = "#1abc9c";
+       		thingFixing = "bt2";
+        	window.setTimeout(fix, 800);
         }
      }
     //Has to do with putting text back to normal color when the player doesn't have enough money
