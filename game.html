@@ -9,7 +9,7 @@
   </head>
 <body>  
 	<button class="dollartree" onclick="collectdollartree()">Dollar Tree</button>
-	<button class="caribou" onclick="collectCaribou()" id="caribou">$200</button>
+	<button class="caribou" onclick="collectCaribou()" id="car">$200</button>
 	<button class="TreeBt1" onclick="advertisements()" id="ad"> Advertisements </button>
     <button class="TreeBt2" onclick="upgradeManager()" id="bt2"> Manager </button>
     <button class="TreeBt3" onclick="advertisements()" id="bt3"> $treebutton </button>
@@ -49,10 +49,10 @@
 		roundAll();
 		document.getElementById("insert").innerHTML = "Money $" + money;
 		} else if(caribouUnlocked == 0 && money<=200) {
-			document.getElementById("caribou").style.color = "red";
-			thingFixing = "caribou";
-			defaultColor = "#000000";
-			fix();
+			document.getElementById("car").style.color = "red";
+			thingFixing = "car";
+            defaultColor = "black";
+            fix();
 		}
 	}
 	//Here is what happens when you buy better advertisements. Bloomburg is familiar with this function.
@@ -106,7 +106,7 @@
         } 	else {
         		money += managerCost;
         		document.getElementById("bt2").style.color = "red";
-        		defaultColor = "#1abc9c";
+        		defaultColor = "black";
        			thingFixing = "bt2";
         		window.setTimeout(fix, 800);
         }
