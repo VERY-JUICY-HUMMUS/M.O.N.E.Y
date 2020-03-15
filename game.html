@@ -41,14 +41,14 @@
 		document.getElementById("insert").innerHTML = "Money $" + money;
 	}
 	function collectCaribou() {
-		if (caribouUnlocked=0 &&  money >= 200) {
+		if (caribouUnlocked==0 &&  money >= 200) {
 		money -= 200;
 		carribouUnlocked = 1;
-		} else if (caribouUnlocked = 1) {
+		} else if (caribouUnlocked == 1) {
 		money += caribouvalue;
 		roundAll();
 		document.getElementById("insert").innerHTML = "Money $" + money;
-		} else if(caribouUnlocked = 0 && money<=200) {
+		} else if(caribouUnlocked == 0 && money<=200) {
 			document.getElementById("caribou").style.color = "red";
 			thingFixing = "caribou";
 			defaultColor = "#000000";
