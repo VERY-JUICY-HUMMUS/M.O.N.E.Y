@@ -9,6 +9,7 @@
   </head>
 <body>  
 	<button class="dollartree" onclick="collectdollartree()">Dollar Tree</button>
+	<button class="caribou" onclick="collectCaribou()">Caribou</button>
 	<button class="TreeBt1" onclick="advertisements()" id="ad"> Advertisements </button>
     <button class="TreeBt2" onclick="upgradeManager()" id="bt2"> Manager </button>
     <button class="TreeBt3" onclick="advertisements()" id="bt3"> $treebutton </button>
@@ -19,6 +20,7 @@
 	//Here are the variables, in case you can't read code.
 	var money = 0;
 	var dollartreevalue = 1;
+	var caribouvalue = 1;
 	var costofdollartreeads = 10;
 	var amountBuying = 1;
 	var managerMoney = 0;
@@ -34,6 +36,11 @@
 	//This is what happens when you click on the dollar tree store. Yes you click on a store to make money.
 	function collectdollartree() {
 		money += dollartreevalue;
+		roundAll();
+		document.getElementById("insert").innerHTML = "Money $" + money;
+	}
+	function collectCaribou() {
+		money += caribouvalue;
 		roundAll();
 		document.getElementById("insert").innerHTML = "Money $" + money;
 	}
