@@ -80,13 +80,14 @@
         	if (money >= 0) {
         		managerCost += (managerCost*0.1);
        			managerMoney += 1;
-                document.getElementById("bt2").innerHTML = "Manager $" + managerCost;
-        } else {
-        	money += managerCost;
-        	document.getElementById("bt2").style.color = "red";
-        	defaultColor = "#1abc9c";
-       		thingFixing = "bt2";
-        	window.setTimeout(fix, 800);
+			managerCost = num.toFixed(2);
+               		document.getElementById("bt2").innerHTML = "Manager $" + managerCost;
+        } 	else {
+        		money += managerCost;
+        		document.getElementById("bt2").style.color = "red";
+        		defaultColor = "#1abc9c";
+       			thingFixing = "bt2";
+        		window.setTimeout(fix, 800);
         }
      }
     //Has to do with putting text back to normal color when the player doesn't have enough money
