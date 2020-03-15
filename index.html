@@ -34,21 +34,26 @@
 	//This is what happens when you click on the dollar tree store. Yes you click on a store to make money.
 	function collectdollartree() {
 		money += dollartreevalue;
-		money = (Math.ceil(money*10)/10);
+		money = (Math.ceil(money*100))/100;
 		document.getElementById("insert").innerHTML = "Money $" + money;
 	}
 	//Here is what happens when you buy better advertisements. Bloomburg is familiar with this function.
 	function advertisements() {
 		money -= (amountBuying*costofdollartreeads);
 		if (money >= 0) {
-			costofdollartreeads += (Math.ceil(costofdollartreeads*0.1*amountBuying*10)/10);
-			dollartreevalue += (Math.ceil(dollartreevalue*0.1*amountBuying*10)/10);
-            money = (Math.ceil(money*10)/10);
+			costofdollartreeads += (costofdollartreeads*0.1*amountBuying);
+			dollartreevalue += (dollartreevalue*0.1*amountBuying);
+            money = (Math.ceil(money*100))/100;
+            costofdollartreeads = (Math.ceil(costofdollartreeads*100))/100;
+            dollartreevalue = (Math.ceil(dollartreevalue*100))/100;
 			document.getElementById("insert").innerHTML = "Money $" + money;
 			document.getElementById("ad").innerHTML = "Advertisements $" + costofdollartreeads;
 		} 
 		else {
             money += (amountBuying*costofdollartreeads);
+            costofdollartreeads += (costofdollartreeads*0.1*amountBuying);
+			dollartreevalue += (dollartreevalue*0.1*amountBuying);
+            money = (Math.ceil(money*100))/100;
 			document.getElementById("ad").style.color = "red";
             document.getElementById("insert").innerHTML = "Money $" + money;
         	defaultColor = "#1abc9c";
@@ -72,6 +77,7 @@
 	//This makes it so managers collect money once we add that feature
 	function update() {
 		money += managerMoney;
+        money = (Math.ceil(money*100))/100;
         document.getElementById("insert").innerHTML = "Money $" + money;
 		window.setTimeout(update, managerUpdateTime);
 	}
@@ -80,8 +86,10 @@
         	if (money >= 0) {
         		managerCost += (managerCost*0.1);
        			managerMoney += 1;
-			managerCost = num.toFixed(2);
-               		document.getElementById("bt2").innerHTML = "Manager $" + managerCost;
+                managerCost = (Math.ceil(managerCost*100))/100;
+                money = (Math.ceil(money*100))/100;
+                document.getElementById("bt2").innerHTML = "Manager $" + managerCost;
+                document.getElementById("insert").innerHTML = "Money $" + money;
         } 	else {
         		money += managerCost;
         		document.getElementById("bt2").style.color = "red";
