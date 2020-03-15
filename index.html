@@ -10,7 +10,7 @@
 <body>  
 	<button class="dollartree" onclick="collectdollartree()">Dollar Tree</button>
 	<button class="TreeBt1" onclick="advertisements()" id="ad"> Advertisements </button>
-    <button class="TreeBt2" onclick="advertisements()" id="bt2"> $treebutton </button>
+    <button class="TreeBt2" onclick="upgradeManager()" id="bt2"> Manager </button>
     <button class="TreeBt3" onclick="advertisements()" id="bt3"> $treebutton </button>
     <button class="TreeBt4" onclick="advertisements()" id="bt4"> $treebutton </button>
 	<button class="amountBuying" onclick="changeAmountBuying()" id="displayAmountBuying">Amount Buying is 1</button>
@@ -22,6 +22,9 @@
 	var costofdollartreeads = 10;
 	var amountBuying = 1;
 	var managerMoney = 0;
+    var managerCost = 10;
+    var defaultColor;
+    var thingFixing;
 	var managerUpdateTime = 1000; //This is in miliseconds --> 1000 = 1 second
 	document.getElementById("ad").innerHTML = "Advertisements $" + costofdollartreeads;
 	
@@ -65,10 +68,26 @@
 	//This makes it so managers collect money once we add that feature
 	function update() {
 		money += managerMoney;
+        document.getElementById("insert").innerHTML = "Money $" + money;
 		window.setTimeout(update, managerUpdateTime);
-	
 	}
-	
+     function upgradeManager() {
+     money -= managerCost;
+     	if (money >= 0) {
+        managerCost += (managerCost*0.1);
+        managerMoney += 1;
+        } else {
+        money += managerCost;
+        document.getElementById("bt2").style.color = "red";
+        defaultColor = "black";
+        thingFixing = "bt2";
+        window.setTimeout(fix, 800);
+        }
+     }
+    //Has to do with putting text back to normal color when the player doesn't have enough money
+    function fix() {
+    	document.getElementById(thingFixing).style.color = defaultColor;
+    }
 	function saveGame() {
 		localSave.money = Number(money);
 		localSave.dollartreevalue = Number(dollartreevalue);
@@ -81,6 +100,8 @@
 		dollartreevalue = Number(localSave.dollartreevalue);
 		costofdollartreeads = Number(localSave.costofdollartreeads);
 	}
+
+update(); //Please Do Not Get Rid Of
 //document.getElementById("ad").innerHTML = "this should work"; ---- Please don't delete
 </script>
 </body>
