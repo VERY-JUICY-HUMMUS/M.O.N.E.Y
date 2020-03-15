@@ -42,22 +42,22 @@
 		document.getElementById("insert").innerHTML = "Money $" + money;
 	}
 	function collectCaribou() {
-		if (caribouUnlocked == 0 &&  money >= 200) {
+		if (caribouUnlocked === 0 &&  money >= 200) {
 		money -= 200;
 		carribouUnlocked = 1;
 		document.getElementById("car").innerHTML = "Caribou";
-		document.getElementById("car").style.backgroundColor = "brown";
+		document.getElementById("car").style.backgroundColor = "#69a5ff";
         document.getElementById("car").style.color = "#634435";
         
 		} else if (carribouUnlocked === 1) {
 		money += caribouvalue;
 		roundAll();
 		document.getElementById("insert").innerHTML = "Money $" + money;
-		} else if(caribouUnlocked == 0 && money<=200) {
+		} else if(caribouUnlocked === 0 && money<=200) {
 			document.getElementById("car").style.color = "red";
 			defaultColor = "black";
 			thingFixing = "car";
-            		window.setTimeout(fix, 800);
+            window.setTimeout(fix, 800);
 		}
 	}
 	//Here is what happens when you buy better advertisements. Bloomberg is familiar with this function.
