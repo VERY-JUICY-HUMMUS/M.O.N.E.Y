@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
 <html>
 <body>
-    <button onclick="play()"> Play</button>
-    <button> onclick="options()">Options</button>
-    <button> Help</button>
+    <button onclick="play()" class="button"> Play</button>
+    <button onclick="options()" class="button">Options</button>
+    <button class="button"> Help</button>
 </body>
 <script>
 function play() {
@@ -15,5 +15,19 @@ function options() {
 }
 </script>
 <style>
+.button {
+	position: relative;
+	display: inline;
+	padding: 10px 10px;
+	font-size: 12px;
+	cursor: pointer;
+	text-align: center;
+	color: #000000;
+	background-color: #BABABA;
+	border: none;
+	border-radius: 10px;
+	margin-top: 130px;
+	top: -25px;
+}
 </style>
 </html>
