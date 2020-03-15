@@ -21,6 +21,8 @@
 	var dollartreevalue = 1;
 	var costofdollartreeads = 10;
 	var amountBuying = 1;
+	var managerMoney = 0;
+	var managerUpdateTime = 1000; //This is in miliseconds --> 1000 = 1 second
 	document.getElementById("ad").innerHTML = "Advertisements $" + costofdollartreeads;
 	
 	//This displays Money with the variable 'money' 
@@ -59,6 +61,12 @@
 			amountBuying = 1;
 			document.getElementById("displayAmountBuying").innerHTML = "Amount Buying is " + amountBuying;
 		}
+	}
+	//This makes it so managers collect money once we add that feature
+	function update() {
+		money += managerMoney;
+		window.setTimeout(update, managerUpdateTime);
+	
 	}
 	
 	function saveGame() {
