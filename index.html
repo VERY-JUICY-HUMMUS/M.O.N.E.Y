@@ -34,7 +34,7 @@
 	//This is what happens when you click on the dollar tree store. Yes you click on a store to make money.
 	function collectdollartree() {
 		money += dollartreevalue;
-		money = (Math.ceil(money*100))/100;
+		roundAll();
 		document.getElementById("insert").innerHTML = "Money $" + money;
 	}
 	//Here is what happens when you buy better advertisements. Bloomburg is familiar with this function.
@@ -43,17 +43,13 @@
 		if (money >= 0) {
 			costofdollartreeads += (costofdollartreeads*0.1*amountBuying);
 			dollartreevalue += (dollartreevalue*0.1*amountBuying);
-            money = (Math.ceil(money*100))/100;
-            costofdollartreeads = (Math.ceil(costofdollartreeads*100))/100;
-            dollartreevalue = (Math.ceil(dollartreevalue*100))/100;
+            roundAll();
 			document.getElementById("insert").innerHTML = "Money $" + money;
 			document.getElementById("ad").innerHTML = "Advertisements $" + costofdollartreeads;
 		} 
 		else {
             money += (amountBuying*costofdollartreeads);
-            costofdollartreeads += (costofdollartreeads*0.1*amountBuying);
-			dollartreevalue += (dollartreevalue*0.1*amountBuying);
-            money = (Math.ceil(money*100))/100;
+            roundAll();
 			document.getElementById("ad").style.color = "red";
             document.getElementById("insert").innerHTML = "Money $" + money;
         	defaultColor = "#1abc9c";
@@ -77,17 +73,16 @@
 	//This makes it so managers collect money once we add that feature
 	function update() {
 		money += managerMoney;
-        money = (Math.ceil(money*100))/100;
-        document.getElementById("insert").innerHTML = "Money $" + money;
+        	roundAll();
+        	document.getElementById("insert").innerHTML = "Money $" + money;
 		window.setTimeout(update, managerUpdateTime);
 	}
         function upgradeManager() {
-        money -= managerCost;
+        	money -= managerCost;
         	if (money >= 0) {
         		managerCost += (managerCost*0.1);
        			managerMoney += 1;
-                managerCost = (Math.ceil(managerCost*100))/100;
-                money = (Math.ceil(money*100))/100;
+                roundAll();
                 document.getElementById("bt2").innerHTML = "Manager $" + managerCost;
                 document.getElementById("insert").innerHTML = "Money $" + money;
         } 	else {
@@ -114,7 +109,13 @@
 		dollartreevalue = Number(localSave.dollartreevalue);
 		costofdollartreeads = Number(localSave.costofdollartreeads);
 	}
-
+    //Rounds everything so code is more simple
+	function roundAll() {
+    	money = (Math.ceil(money*100))/100;
+    	managerCost = (Math.ceil(managerCost*100))/100;
+    	costofdollartreeads = (Math.ceil(costofdollartreeads*100))/100;
+        dollartreevalue = (Math.ceil(dollartreevalue*100))/100;
+    }
 update(); //Please Do Not Get Rid Of
 //document.getElementById("ad").innerHTML = "this should work"; ---- Please don't delete
 </script>
