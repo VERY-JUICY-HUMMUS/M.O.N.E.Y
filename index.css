@@ -4,7 +4,7 @@
 	left: 10px;
 	right: 10px;
 	top: -20px;
-	color: #BABABA;
+	color: #000000;
 	cursor: pointer;
 	padding: 30px;
 	border-radius: 15x;
@@ -113,7 +113,7 @@
 	cursor: pointer;
 	text-align: center;
 	color: #1abc9c;
-	background-color: #BABABA;
+	background-color: #000000;
 	border: solid;
 }
 
