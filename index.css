@@ -116,6 +116,22 @@
 	border: none;
 }
 
+.caribou {
+	position: relative;
+	display: inline block;
+	padding: 40px 20px;
+	font-size: 24px;
+	cursor: pointer;
+	text-align: left;
+	color: #00FF7F;
+	background-color: #008000;
+	border: none;
+	border-radius: 15px;
+	/*margin-left: 20px;
+	margin-right: 20px;*/
+	margin-top: 240px;
+}
+
 body{
         background-color: #000000;
 }
