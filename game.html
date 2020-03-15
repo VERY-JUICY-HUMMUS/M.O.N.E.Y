@@ -50,12 +50,13 @@
 		document.getElementById("insert").innerHTML = "Money $" + money;
 		} else if(caribouUnlocked == 0 && money<=200) {
 			document.getElementById("car").style.color = "red";
+			defaultColor = "black";
 			thingFixing = "car";
-            defaultColor = "black";
-            fix();
+            		
+            		
 		}
 	}
-	//Here is what happens when you buy better advertisements. Bloomburg is familiar with this function.
+	//Here is what happens when you buy better advertisements. Bloomberg is familiar with this function.
 	function advertisements() {
 		money -= (amountBuying*costofdollartreeads);
 		if (money >= 0) {
@@ -113,7 +114,7 @@
      }
     //Has to do with putting text back to normal color when the player doesn't have enough money
     function fix() {
-    	document.getElementById(thingFixing).style.color = defaultColor;
+    	window.setTimeout(fix, 800);
     }
 	function saveGame() {
 		localSave.money = Number(money);
