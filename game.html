@@ -113,7 +113,7 @@
      }
     //Has to do with putting text back to normal color when the player doesn't have enough money
     function fix() {
-    	window.setTimeout(fix, 800);
+    	document.getElementById(thingFixing).style.color = defaultColor;
     }
 	function saveGame() {
 		localSave.money = Number(money);
