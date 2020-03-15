@@ -27,6 +27,7 @@
         var thingFixing;
 	var managerUpdateTime = 1000; //This is in miliseconds --> 1000 = 1 second
 	document.getElementById("ad").innerHTML = "Advertisements $" + costofdollartreeads;
+    document.getElementById("bt2").innerHTML = "Manager $" + managerCost;
 	
 	//This displays Money with the variable 'money' 
 	document.getElementById("insert").innerHTML = "Money $" + money;
@@ -48,8 +49,11 @@
 		} 
 		else {
             money += (amountBuying*costofdollartreeads);
-			alert ("You do not have enough money.");
-			document.getElementById("insert").innerHTML = "Money $" + money;
+			document.getElementById("ad").style.color = "red";
+            document.getElementById("insert").innerHTML = "Money $" + money;
+        	defaultColor = "#1abc9c";
+       		thingFixing = "ad";
+        	window.setTimeout(fix, 800);
 		}
 	}
 	//Other cool stuff to do with buying things. 
@@ -76,6 +80,7 @@
         	if (money >= 0) {
         		managerCost += (managerCost*0.1);
        			managerMoney += 1;
+                document.getElementById("bt2").innerHTML = "Manager $" + managerCost;
         } else {
         	money += managerCost;
         	document.getElementById("bt2").style.color = "red";
