@@ -9,23 +9,54 @@
 function play() {
 window.location.href = "https://very-juicy-hummus.github.io/M.O.N.E.Y/game";
 }
-    
-function options() {
-
-}
 	
 function help(){
 	var popup = document.getElementById("myPopup");
 	popup.classList.toggle("show");
 }
-</script>
+	
+function options() {
+  var y = document.getElementById("myDIV");
+  if (y.style.display === "none") {
+    y.style.display = "block";
+  } else {
+    y.style.display = "none";
+  }
+}
 
+function display() {
+var inputStuff= document.getElementById("box").value;
+document.getElementById("myDIV").style.display = "none";
+alert(inputStuff);}
+</script>
+	
+<div id="myDIV" class="popUp">
+<p> Light or Dark mode?</p>
+<input type="textbox" ID="box" class="thingy">
+<input class="done" type="submit" value="Done" onclick="display()"/>
+</div>
 </body>
 </html>
 
 }      
 </script>
 <style>
+.popUp {
+position: relative;
+left: 50%;
+top: 50px;
+padding: 15px;
+background: grey;
+font-size: 30px;
+}
+.done {
+right: 70%;
+padding: 10px;
+border: rounded;
+}
+.thingy {
+padding: 2px;
+}
 body{
 background-color: grey;
 }
