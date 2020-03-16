@@ -30,23 +30,24 @@ document.getElementById("myDIV").style.display = "none";}
 </script>
 	
 <div id="myDIV" class="popUp">
-<p> Light or Dark mode?</p>
-<input type="textbox" ID="box" class="thingy">
-<input class="done" type="submit" value="Done" onclick="display()"/>
-</div>
-
-}     
+	<p> Light or Dark mode?</p>
+	<input type="textbox" ID="box" class="thingy">
+	<input class="done" type="submit" value="Done" onclick="display()"/>
+	</div>
+   
 <style>
 .popUp {
 position: relative;
 left: 50%;
 top: 50px;
 padding: 15px;
-background: grey;
+background: white;
 font-size: 30px;
+border-radius: 2%;
+width: 40%;
+text-align: center;
 }
 .done {
-right: 70%;
 padding: 10px;
 border: rounded;
 }
