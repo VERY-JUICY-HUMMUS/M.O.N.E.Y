@@ -6,8 +6,6 @@
     <button onclick="help()" class="button3"> Help</button>
 </body>
 <script>
-document.getElementById("myDIV").style.display = "none"; // Makes the Pop Up start closed
-	
 function play() {
 window.location.href = "https://very-juicy-hummus.github.io/M.O.N.E.Y/game";
 }
@@ -28,8 +26,7 @@ function options() {
 
 function display() {
 var inputStuff= document.getElementById("box").value;
-document.getElementById("myDIV").style.display = "none";
-alert(inputStuff);}
+document.getElementById("myDIV").style.display = "none";}
 </script>
 	
 <div id="myDIV" class="popUp">
@@ -37,11 +34,8 @@ alert(inputStuff);}
 <input type="textbox" ID="box" class="thingy">
 <input class="done" type="submit" value="Done" onclick="display()"/>
 </div>
-</body>
-</html>
 
-}      
-</script>
+}     
 <style>
 .popUp {
 position: relative;
